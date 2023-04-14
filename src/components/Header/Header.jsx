@@ -41,7 +41,6 @@ const Header = ({ toggleTheme, theme }) => {
                 <i className="uil uil-estate nav__icon"></i>Home
               </Link>
             </li>
-
             <li className="nav__item">
               <Link
                 activeClass="active-link"
@@ -57,7 +56,6 @@ const Header = ({ toggleTheme, theme }) => {
                 <i className="uil uil-user nav__icon"></i>About
               </Link>
             </li>
-
             <li className="nav__item">
               <Link
                 activeClass="active-link"
@@ -75,7 +73,6 @@ const Header = ({ toggleTheme, theme }) => {
                 <i class="bx bx-objects-vertical-bottom nav__icon"></i>Skills
               </Link>
             </li>
-
             <li className="nav__item">
               <Link
                 activeClass="active-link"
@@ -93,7 +90,6 @@ const Header = ({ toggleTheme, theme }) => {
                 <i className="uil uil-scenery nav__icon"></i> Qualifications
               </Link>
             </li>
-
             <li className="nav__item">
               <Link
                 activeClass="active-link"
@@ -109,25 +105,6 @@ const Header = ({ toggleTheme, theme }) => {
                 }
               >
                 <i className="uil uil-scenery nav__icon"></i> Portfolio
-              </Link>
-            </li>
-
-            <li className="nav__item">
-              <Link
-                activeClass="active-link"
-                smooth={true}
-                spy={true}
-                duration={100}
-                y
-                to="travel"
-                onClick={() => setActiveNav("travel")}
-                className={
-                  activeNav === "#travel"
-                    ? "nav__link active-link"
-                    : "nav__link"
-                }
-              >
-                <i class="bx bxs-plane-take-off nav__icon"></i> Travel
               </Link>
             </li>
             <li className="nav__item">
@@ -172,15 +149,20 @@ const Header = ({ toggleTheme, theme }) => {
           ></i>
         </div>
         <div className="nav__buttons">
-          <i
-            className={
-              theme === "light-theme"
-                ? "uil uil-moon change-theme"
-                : "uil uil-brightness change-theme"
-            }
-            onClick={toggleTheme}
-            id="theme-button"
-          ></i>
+          <span className="theme__text">Change theme</span>
+          <div onClick={toggleTheme} className={`toggle${theme === "dark-theme" ? " night" : ""}`}>
+            <div className="notch">
+              <div className="crater" />
+              <div className="crater" />
+              <div className="crater" />
+            </div>
+            <div>
+              <div className="shape sm" />
+              <div className="shape sm" />
+              <div className="shape md" />
+              <div className="shape lg" />
+            </div>
+          </div>
           <div className="nav__toggle" onClick={() => showMenu(!Toggle)}>
             <i className="uil uil-apps"></i>
           </div>

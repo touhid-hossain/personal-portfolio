@@ -44,14 +44,8 @@
 
 .nav__buttons {
   display: flex;
+  gap: 1rem;
   align-items: center;
-}
-
-.change-theme {
-  font-size: 1.25rem;
-  color: var(--title-color);
-  margin-right: var(--mb-1);
-  cursor: pointer;
 }
 
 .nav__icon,
@@ -65,6 +59,136 @@
 .nav__link:hover {
   background-color: var(--title-color);
   color: var(--container-color);
+}
+
+/* Night-Mode Toggler*/
+.toggle {
+  height: 30px;
+  width: 70px;
+  border-radius: 50px;
+  margin: auto;
+  background-image: linear-gradient(aqua, skyblue);
+  position: relative;
+  cursor: pointer;
+}
+
+.toggle.night {
+  background-image: linear-gradient(midnightblue, rebeccapurple);
+}
+
+.notch {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: yellow;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  box-shadow: 0 0 5px yellow;
+  z-index: 1;
+  transition: all 0.3s ease;
+}
+
+.notch > .crater {
+  background: burlywood;
+  border-radius: 50%;
+  position: absolute;
+  opacity: 0;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.4) inset;
+}
+.night .crater {
+  opacity: 0.4;
+}
+
+.crater:first-child {
+  left: 0px;
+  top: 2px;
+  height: 7px;
+  width: 12px;
+  transform: rotate(-30deg);
+}
+
+.crater:nth-child(2) {
+  right: 5px;
+  top: 7px;
+  height: 14px;
+  width: 11px;
+  transform: rotate(70deg);
+}
+
+.crater:last-child {
+  right: 0px;
+  top: 4px;
+  height: 4px;
+  width: 8px;
+  transform: rotate(50deg);
+}
+
+.night > .notch {
+  background: whitesmoke;
+  box-shadow: 0 0 5px whitesmoke;
+  transform: translate(40px, 0);
+}
+
+.shape {
+  position: absolute;
+  background: whitesmoke;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.shape.sm {
+  height: 5px;
+  width: 20px;
+  top: 40%;
+  left: 60%;
+}
+
+.shape.md {
+  height: 5px;
+  width: 20px;
+  top: 25%;
+  left: 22%;
+  z-index: 2;
+}
+
+.shape.lg {
+  height: 5px;
+  width: 25px;
+  bottom: 6px;
+  left: 30%;
+}
+
+.night .shape {
+  background: lightgray;
+  box-shadow: 0 0 10px 2px violet;
+}
+
+.night .shape.sm {
+  height: 3px;
+  width: 3px;
+  transform: translate(-25px, 0px);
+}
+
+.night .shape.sm:first-of-type {
+  transform: translate(-5px, 6px);
+}
+
+.night .shape.md {
+  height: 5px;
+  width: 5px;
+  transform: translate(15px, 0px);
+}
+
+.night .shape.lg {
+  height: 8px;
+  width: 8px;
+  transform: translate(2px, 4px);
+}
+
+.theme__text {
+  font-size: var(--small-font-size);
+  color: var(--spec-title-color);
 }
 
 /* Change background */
@@ -95,6 +219,7 @@
     box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
     border-radius: 1.5rem 1.5rem 0 0;
     transition: 0.3s;
+    z-index: 4;
   }
 
   /* Show Menu */

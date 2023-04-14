@@ -12,6 +12,21 @@
 
 .about__description {
   font-size: 14px;
+  line-height: 2;
+  margin: 10px 0;
+  color: var(--spec-subtitle-color);
+}
+
+.desc__part {
+  margin: 20px 0;
+}
+
+.desc__title {
+  color: var(--spec-title-color);
+}
+
+.special__text {
+  color: var(--light-orange);
 }
 
 /*=============== BREAKPOINTS ===============*/

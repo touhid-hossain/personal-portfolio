@@ -12,7 +12,7 @@ import Footer from "./components/Footer/Footer";
 import ScrollUp from "./components/Scroll-Up/ScrollUp";
 import Portfolio from "./components/Portfolio/Portfolio";
 import Resume from "./components/Resume/Resume";
-import Travel from "./components/Travel/Travel";
+// import Travel from "./components/Travel/Travel";
 
 function App() {
   const [theme, setTheme] = useState(
@@ -43,7 +43,7 @@ function App() {
         <Qualifications />
         <Portfolio />
         {/* <Testimonials /> */}
-        <Travel />
+        {/* <Travel /> */}
         <Resume />
         <Contact />
       </main>
