@@ -36,8 +36,16 @@
     grid-template-columns: 1fr;
     row-gap: 2.5rem;
   }
-
   .about__img {
-    width: 220px;
+    width: 70%;
+  }
+  .desc__part {
+    margin: 50px 0;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .about__img {
+    width: 80%;
   }
 }

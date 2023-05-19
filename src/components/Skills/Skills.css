@@ -102,6 +102,10 @@
 
 /* For medium devices */
 @media screen and (max-width: 768px) {
+  .skills__sec {
+    flex-direction: column;
+    gap: 5rem;
+  }
 }
 
 @media screen and (max-width: 576px) {
